@@ -1,0 +1,76 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "alpha-ui-components",
+  "author": "Christian Hardy",
+  "module": "dist/alpha-ui-components.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/alpha-ui-components.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/alpha-ui-components.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "@babel/preset-typescript": "^7.21.5",
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-info": "^6.0.0-alpha.2",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/addons": "^7.0.18",
+    "@storybook/react": "^7.0.18",
+    "@storybook/react-webpack5": "^7.0.18",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "babel-loader": "^9.1.2",
+    "husky": "^8.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "size-limit": "^8.2.4",
+    "storybook": "^7.0.18",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.5.2",
+    "typescript": "^3.9.10"
+  }
+}
