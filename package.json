@@ -3,6 +3,10 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristianHardy/alpha-ui-component.git"
+  },
   "files": [
     "dist",
     "src"
@@ -72,5 +76,11 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.5.2",
     "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^10.16.4"
   }
 }
